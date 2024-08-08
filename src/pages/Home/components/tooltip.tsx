@@ -1,13 +1,11 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import React from "react";
 import { sentimentColors } from "./review-highlighter";
-
-interface TooltipProps {
-  topic: string;
-}
-
-const Tooltip: React.FC<TooltipProps> = ({ topic }) => {
-  return <p className="tooltip">{}</p>;
-};
 
 interface HighlightedSentenceProps {
   sentence: string;
@@ -24,8 +22,17 @@ export const HighlightedSentence: React.FC<HighlightedSentenceProps> = ({
     <mark
       style={{ backgroundColor: sentimentColors[sentiment], color: "white" }}
     >
-      {sentence}
-      <Tooltip topic={topic} />
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger className=" cursor-pointer">
+            hello
+            {sentence}
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{topic}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </mark>
   );
 };

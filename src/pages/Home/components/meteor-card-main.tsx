@@ -65,7 +65,7 @@ export function MeteorsDemo({ title, review }: MeteorsProps) {
           </Dialog>
 
           {/* Meaty part - Meteor effect */}
-          <Meteors number={20} />
+          <Meteors number={100} />
         </div>
       </div>
     </div>

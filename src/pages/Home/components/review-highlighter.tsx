@@ -19,20 +19,23 @@ export const ReviewHighlighter: React.FC<ReviewHighlighterProps> = ({
 }) => {
   const getHighlightedContent = () => {
     let content = review.content;
+    const parts: string[] = [];
+    let lastIndex = 0;
 
-    review.analytics.forEach(({ sentences, sentiment }) => {
-      sentences.forEach((sentence) => {
-        const index = content.indexOf(sentence);
-        if (index >= 0) {
-          const before = content.slice(0, index);
-          const after = content.slice(index + sentence.length);
-          const highlightedSentence = `<mark style="background-color: ${sentimentColors[sentiment]}">${sentence}</mark>`;
-          content = before + highlightedSentence + after;
-        }
+    review.analytics.forEach(({ highlight_indices }) => {
+      highlight_indices.forEach(([start, end, sentiment]) => {
+        parts.push(content.slice(lastIndex, start));
+        parts.push(
+          `<mark class="hover:underline rounded-md px-2" style="background-color: ${
+            sentimentColors[sentiment]
+          }" title="${sentiment}">${content.slice(start, end)}</mark>`
+        );
+        lastIndex = end;
       });
     });
 
-    return content;
+    parts.push(content.slice(lastIndex));
+    return parts.join("");
   };
 
   return (
