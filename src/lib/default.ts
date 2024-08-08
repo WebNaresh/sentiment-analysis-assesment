@@ -14,6 +14,7 @@ interface Analytics {
   sentiment: "Positive" | "Negative" | "Mixed" | "Neutral";
   highlight_indices: [number, number, string][]; // Ensure this matches the expected type
 }
+type HighlightIndex = [number, number, string];
 
 interface Review {
   review_id: string;
@@ -42,15 +43,15 @@ interface Review {
   };
   bookmarked: boolean;
   bookmark_pk: number;
-  analytics: Array<{
+  analytics: {
     category: string;
     topic: string;
     phrases: string[];
     sentences: string[];
     sentiment: string;
-    highlight_indices: Array<[number, number, string]>;
-  }>;
-  highlight_indices: Array<[number, number, string]>;
+    highlight_indices: HighlightIndex[];
+  }[];
+  highlight_indices: HighlightIndex[];
 }
 
 export type { Analytics, Review, Sentiment, Source };
