@@ -1,23 +1,32 @@
-import { Review } from "@/lib/default";
 import React, { useEffect, useState } from "react";
 import { MeteorsDemo } from "./components/meteor-card-main";
 
 // Define the Review type based on your JSON data
+type Review = {
+  review_id: string;
+  reviewer_name: string;
+  // Add other fields as necessary
+};
 
 const ReviewList: React.FC = () => {
-  const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const jsonDataElement: any = document.getElementById("reviewsData");
-        const jsonData = JSON.parse(jsonDataElement.textContent || "[]");
-        console.log(`🚀 ~ file: Home.tsx:17 ~ jsonData:`, jsonData);
-        setReviews(jsonData);
+        const response = await fetch(
+          "https://raw.githubusercontent.com/WebNaresh/sentiment-analysis-assesment/main/src/assets/data.json"
+        );
+        console.log(`🚀 ~ file: Home.tsx:42 ~ response:`, response);
 
-        // Use the JSON data in your application
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const jsonData = await response.json();
+        console.log(`🚀 ~ file: Home.tsx:17 ~ jsonData:`, jsonData);
+        setReviews(jsonData as Review[]);
       } catch (error: any) {
         setError(error?.message || "An error occurred");
       } finally {
@@ -27,10 +36,6 @@ const ReviewList: React.FC = () => {
 
     fetchReviews();
   }, []);
-  const jsonDataElement: any = document.getElementById("reviewsData");
-  console.log(`🚀 ~ file: Home.tsx:30 ~ jsonDataElement:`, jsonDataElement);
-  // const jsonData = JSON.parse(jsonDataElement.textContent || "[]");
-  // console.log(`🚀 ~ file: Home.tsx:17 ~ jsonData:`, jsonData);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
