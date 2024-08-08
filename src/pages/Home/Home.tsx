@@ -1,12 +1,8 @@
+import { Review } from "@/lib/default";
 import React, { useEffect, useState } from "react";
 import { MeteorsDemo } from "./components/meteor-card-main";
 
 // Define the Review type based on your JSON data
-type Review = {
-  review_id: string;
-  reviewer_name: string;
-  // Add other fields as necessary
-};
 
 const ReviewList: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
