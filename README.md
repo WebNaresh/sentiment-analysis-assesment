@@ -1,430 +1,152 @@
-# Create ReactMateWindViteTypescript App
-
-<img alt="Logo" align="right" src='https://raw.githubusercontent.com/WebNaresh/vite-react-app-mui-tailwindcss--integrate/c13d1d838d287cd986f48ddd11433be41523acf0/src/assets/my.svg' width="20%" />
-
-Create ReactMateWindViteTypescript apps with no build configuration.
-
-- [Creating an App](#creating-an-app) – How to create a new app.
-
-Create ReactMateWindViteTypescript App works on macOS, Windows, and Linux.<br>
-
-## Quick Overview
-
-```sh
-npx create-ReactMateWindViteTypescript-app my-app
-cd my-app
-npm start
-```
-
-If you've previously installed `create-ReactMateWindViteTypescript-app` globally via `npm install -g create-ReactMateWindViteTypescript-app`, we recommend you uninstall the package using `npm uninstall -g create-ReactMateWindViteTypescript-app` or `yarn global remove create-ReactMateWindViteTypescript-app` to ensure that npx always uses the latest version.
-
-_([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
-
-Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
-When you’re ready to deploy to production, create a minified bundle with `npm run build`.
-
-### Get Started Immediately
-
-You **don’t** need to install or configure tools like webpack or Babel.<br>
-They are preconfigured and hidden so that you can focus on the code.
-
-Create a project, and you’re good to go.
-
-## Creating an App
-
-**You’ll need to have Node 14.0.0 or later version on your local development machine** (but it’s not required on the server). We recommend using the latest LTS version. You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to switch Node versions between different projects.
-
-To create a new app, you may choose one of the following methods:
-
-### npx
-
-```sh
-npx create-ReactMateWindViteTypescript-app my-app
-```
-
-Op
-_([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) is a package runner tool that comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
-
-### npm
-
-```sh
-npm init ReactMateWindViteTypescript-app my-app
-```
-
-_`npm init <initializer>` is available in npm 6+_
-
-### Yarn
-
-```sh
-yarn create ReactMateWindViteTypescript-app my-app
-```
-
-_[`yarn create <starter-kit-package>`](https://yarnpkg.com/lang/en/docs/cli/create/) is available in Yarn 0.25+_
-
-It will create a directory called `my-app` inside the current folder.<br>
-Inside that directory, it will generate the initial project structure and install the transitive dependencies:
-
-```
-my-app
-├── README.md
-├── node_modules
-├── package.json
-├── .gitignore
-├── public
-│   └── my.svg
-└── src
-    ├── assets
-    │   └── my.svg
-    ├── hooks
-    │   └── useAppCookies.jsx
-    │   └── useAppFunction.jsx
-    │   └── useAppState.jsx
-    ├── lib
-    │   └── globalUseEffect.jsx
-    ├── pages
-    │   └── About
-    │   │     └── components
-    │   │     │       └── component1.jsx
-    │   │     └── About.jsx
-    │   └── Home
-    │        └── components
-    │        │       └── component1.jsx
-    │        └── home.jsx
-    ├── utils
-    │   └── AppAlert
-    │   │     └── AppAlert.jsx
-    │   └── AppLoader
-    │   │     └── AppLoader.jsx
-    │   └── TopLoadingBar
-    │   │     └── TopLoadingBar.jsx
-    │   └── TopNav
-    │        └── TopNav.jsx
-    ├── App.jsx
-    ├── index.css
-    ├── main.jsx
-    ├── route.jsx
-    └── .env.local
-    └── eslintrc.cjs
-    └── .gitignore
-    └── index.html
-    └── package.json
-    └── postcss.config.js
-    └── README.md
-    └── tailwind.cofig.js
-    └── vite.cofig.js
-```
-
-No configuration or complicated folder structures, only the files you need to build your app.<br>
-Once the installation is done, you can open your project folder:
-
-```sh
-cd my-app
-```
-
-Inside the newly created project, you can run some built-in commands:
-
-### `npm start` or `yarn start`
-
-Runs the app in development mode.<br>
-
-The page will automatically reload if you make changes to the code.<br>
-You will see the build errors and lint warnings in the console.
-
-### `npm test` or `yarn test`
-
-Runs the test watcher in an interactive mode.<br>
-By default, runs tests related to files changed since the last commit.
-
-[Read more about testing.](https://facebook.github.io/create-ReactMateWindViteTypescript-app/docs/running-tests)
-
-### `npm run build` or `yarn build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles ReactMateWindViteTypescript in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-
-Your app is ready to be deployed.
-
-## User Guide
-
-You can find detailed instructions on using Create ReactMateWindViteTypescript App and many tips in [its documentation](https://facebook.github.io/create-ReactMateWindViteTypescript-app/).
-
-## How to Update to New Versions?
-
-Please refer to the [User Guide](https://facebook.github.io/create-ReactMateWindViteTypescript-app/docs/updating-to-new-releases) for this and other information.
-
-## Philosophy
-
-- **One Dependency:** This library follows the philosophy of simplicity and ease of use. While it leverages powerful tools such as webpack, Babel, ESLint, and others behind the scenes, it presents users with a single, cohesive build dependency. This unified approach ensures a curated experience without overwhelming configurations.
-
-- **No Configuration Required:** We believe in minimizing the hassle for developers. The library comes pre-configured for both development and production builds. You can dive straight into writing code without spending time on intricate setup details.
-
-- **No Lock-In:** Your freedom is important. At any point, you can "eject" to a custom setup. With a single command, all configurations and build dependencies can be moved directly into your project. This flexibility allows you to tailor the environment to your needs, picking up right where you left off.
-
-## What’s Included?
-
-Your environment will have everything you need to build a modern single-page ReactMateWindViteTypescript app:
-
-- ReactMateWindViteTypescript, JSX, ES6, TypeScript and Flow syntax support.
-- Language extras beyond ES6 like the object spread operator.
-- Autoprefixed CSS, so you don’t need `-webkit-` or other prefixes.
-- A fast interactive unit test runner with built-in support for coverage reporting.
-- A live development server that warns about common mistakes.
-- A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
-- An offline-first [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/), meeting all the [Progressive Web App](https://facebook.github.io/create-ReactMateWindViteTypescript-app/docs/making-a-progressive-web-app) criteria. (_Note: Using the service worker is opt-in as of `ReactMateWindViteTypescript-scripts@2.0.0` and higher_)
-- Hassle-free updates for the above tools with a single dependency.
-
-Check out [this guide](https://github.com/nitishdayal/cra_closer_look) for an overview of how these tools fit together.
-
-The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://facebook.github.io/create-ReactMateWindViteTypescript-app/docs/available-scripts#npm-run-eject) and customize it, but then you will need to maintain this configuration.
-
-## Popular Alternatives
-
-Create ReactMateWindViteTypescript App is a great fit for:
-
-- **Learning ReactMateWindViteTypescript** in a comfortable and feature-rich development environment.
-- **Starting new single-page ReactMateWindViteTypescript applications.**
-- **Creating examples** with ReactMateWindViteTypescript for your libraries and components.
-
-Here are a few common cases where you might want to try something else:
-
-- If you want to **try ReactMateWindViteTypescript** without hundreds of transitive build tool dependencies, consider [using a single HTML file or an online sandbox instead](https://Reactjs.org/docs/getting-started.html#try-ReactMateWindViteTypescript).
-
-- If you need to **integrate ReactMateWindViteTypescript code with a server-side template framework** like Rails, Django or Symfony, or if you’re **not building a single-page app**, consider using [nwb](https://github.com/insin/nwb), or [Neutrino](https://neutrino.js.org/) which are more flexible. For Rails specifically, you can use [Rails Webpacker](https://github.com/rails/webpacker). For Symfony, try [Symfony's webpack Encore](https://symfony.com/doc/current/frontend/encore/Reactjs.html).
-
-- If you need to **publish a ReactMateWindViteTypescript component**, [nwb](https://github.com/insin/nwb) can [also do this](https://github.com/insin/nwb#ReactMateWindViteTypescript-components-and-libraries), as well as [Neutrino's ReactMateWindViteTypescript-components preset](https://neutrino.js.org/packages/ReactMateWindViteTypescript-components/).
-
-- If you want to do **server rendering** with ReactMateWindViteTypescript and Node.js, check out [Next.js](https://nextjs.org/) or [Razzle](https://github.com/jaredpalmer/razzle). Create ReactMateWindViteTypescript App is agnostic of the backend, and only produces static HTML/JS/CSS bundles.
-
-- If your website is **mostly static** (for example, a portfolio or a blog), consider using [Gatsby](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/). Unlike Create ReactMateWindViteTypescript App, Gatsby pre-renders the website into HTML at build time. Next.js supports both server rendering and pre-rendering.
-
-- Finally, if you need **more customization**, check out [Neutrino](https://neutrino.js.org/) and its [ReactMateWindViteTypescript preset](https://neutrino.js.org/packages/ReactMateWindViteTypescript/).
-
-## Contributing
-
-We'd love to have your helping hand on `create-ReactMateWindViteTypescript-app`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
-
-## Supporting Create ReactMateWindViteTypescript App
-
-Create ReactMateWindViteTypescript App is a community maintained project and all contributors are volunteers. If you'd like to support the future development of Create ReactMateWindViteTypescript App then please consider donating to our [Open Collective](https://opencollective.com/create-ReactMateWindViteTypescript-app).
-
-## Acknowledgements
-
-We are grateful to the authors of existing related projects for their ideas and collaboration:
-
-- [@naresh](https://github.com/WebNaresh/)
-
-## License
-
-Create ReactMateWindViteTypescript App is open source software [licensed as MIT]. The Create ReactMateWindViteTypescript App logo is licensed under
-
-<p align='center'>
-  <img src='https://raw.githubusercontent.com/WebNaresh/vite-react-app-mui-tailwindcss--integrate/c13d1d838d287cd986f48ddd11433be41523acf0/src/assets/my.svg' style='width: 400px; border-radius: 10px;' alt='Build errors'>
-</p>
-
-## How to deply this App
-
-## GitHub Actions Runner Deployment Guide
-
-This guide provides step-by-step instructions for deploying a self-hosted GitHub Actions runner on an AWS EC2 instance. Additionally, it includes optional steps for deploying an NGINX server for frontend deployment and setting up SSL certificates with Certbot.
-
-## 1. Create AWS EC2 Instance and Allocate Elastic IP
-
-- Launch an EC2 instance on AWS.
-- Allocate an Elastic IP and associate it with the EC2 instance.
-
-## 2. Install Node.js and GitHub Actions Runner
-
-```sh
-sudo apt update
-```
-
-```sh
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-```
-
-```sh
-sudo apt install nodejs
-```
-
-```sh
-node --version
-```
-
-# Add the GitHub Actions Runner
-
-```sh
-./config.sh add --labels your-label-name
- Configure and Start the Self-Hosted Runner
-```
-
-cd actions-runner-directory
-
-# Install the runner as a service
-
-```sh
-sudo ./svc.sh install
-```
-
-# Start the runner service
-
-```sh
-sudo ./svc.sh start
-```
-
-# Check the status of the runner
-
-```sh
-sudo ./svc.sh status
-```
-
-Deploy NGINX for Frontend
-
-```sh
-sudo apt install nginx
-```
-
-# Edit NGINX configuration
-
-```sh
-sudo nano /etc/nginx/sites-available/default
-```
-
-# Paste the following file
-
-# NGINX Configuration
-
-```sh
-server {
-    root /var/www/html;
-    server_name aegis-qa.argantechnology.com www.aegis-qa.argantechnolog.com www.aeigs.mooo.com aeigs.mooo.com;
-
-    location /api/ {
-        proxy_pass http://localhost:4000/;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-
-    location / {
-        root /home/ubuntu/actions-runner-backend-qa/_work/AEGIS-frontend/AEGIS-frontend;
-        try_files $uri /index.html;
-    }
+React App for Review Sentiment Analysis
+
+### Task 1: Setup and Display Reviews
+
+1. Create a new React application on the codepen.io
+2. Create a component named `ReviewList` to fetch and display reviews from the provided
+   JSON file.
+3. The reviews data is present in a file named ‘reviewsData.json’. You can download the file
+   from the given link
+
+### Task 2: Highlight Sentences and Apply Colors
+
+1. Implement a component called `ReviewHighlighter` to display reviews and highlight
+   sentences based on sentiment.
+2. Use the `analytics` property in each review to determine sentences and their corresponding
+   sentiments.
+3. Apply colors to sentences based on sentiment (e.g., color code for each sentiment is given in
+   the resource section).
+
+### Task 3: Tooltip with Sentiment Topics
+
+1. Create a `Tooltip` component that appears on hovering over highlighted sentences.
+2. Extract the sentiment topic from the analytics data and display it in the tooltip.
+
+### Task 4: Design and Styling
+
+1. Design the UI based on the provided screenshots, ensuring a clean and user-friendly
+   interface.
+2. Apply CSS styles to the components for proper formatting and alignment.
+3. Use the provided highlight colours for each sentiment.
+
+### Task 5: Optional - Use Highlight Indices
+
+1. If the candidate wants an additional challenge, implement the optional `highlight_indices`
+   property to highlight sentences using specific start and end indices.
+
+### Description of properties in the review object
+
+Example:
+{
+"reviewer_name": "Barbara",
+"content": "We had a relaxing time ❤.\n\n[Positive]: The spa was excellent. We had a wonderful
+relaxing time! [Negative]: The food choices at the Rowe restaurant. Parking should be included in your
+stay because you pay a lot to stay here already.",
+"raw_content": "We had a relaxing time ❤.\n\n[Positive]: The spa was excellent. We had a wonderful
+relaxing time! [Negative]: The food choices at the Rowe restaurant. Parking should be included in your
+stay because you pay a lot to stay here already.",
+"date": "05 Dec 2023",
+"rating_review_score": 10.0,
+"out_of": 10.0,
+"source_language": "en",
+"source": {
+"name": "booking.com",
+"icon": "https://reviewmagic.innspire.com:8001/media/sources/booking3.png",
+},
+"analytics": [
+{
+"category": "spa",
+"topic": "spa",
+"phrases": ["spa", "spa"],
+"sentences": ["The spa was excellent"],
+"sentiment": "Positive",
+"highlight_indices": [
+[40, 61, "Positive"]
+]
+},
+{
+"category": "facilities",
+"topic": "facilities",
+"phrases": ["parking", "parking"],
+"sentences": ["Parking should be included in your stay because you pay a lot to stay here already"],
+"sentiment": "Negative",
+"highlight_indices":
+[ [155, 237, "Negative"]
+]
 }
+],
+}
+Description:
+● reviewer_name: Name of the reviewer.
+● content: The main text content of the review.
+● raw_content: Unmodified original content of the review.
+● date: Date when the review was posted.
+● rating_review_score: Numeric rating given by the reviewer.
+● out_of: Maximum rating possible (e.g., 10.0).
+● source: Information about the source of the review.
+○ name: Name of the source (eg: booking.com).
+○ icon: Icon of the source.
+● source_language: Language in which the review is written.
+● analytics: Array containing sentiment analytics for specific categories.
+○ category: Category associated with the analytics.
+○ topic: Topic associated with analytics.
+○ phrases: Phrases related to analytics.
+○ sentences: Extracted sentences related to the analytics.
+○ sentiment: Sentiment of the analytics.
+○ highlight_indices:Array containing start and end indices for highlighted
+sentences.
 
-```
+### Submission Guidelines:
 
-# Lets consider i have sever on localhost:4000
+1. The candidate should create a codepen for the react app.
+2. Login with your email id and then share us the link of the project in a pdf with a brief
+   explanation of what you successfully implemented/created in this project (also mention
+   any libraries, packages or framework if you use any)
+3. The pdf must be named as FullName_MobileNumber.
 
-# that's why i written this code
+### Evaluation Criteria:
 
-```sh
- location /api/ {
-        proxy_pass http://localhost:4000/;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-```
+1. Functionality: Ensure the React app displays reviews, highlights sentences, and shows
+   tooltips as described.
+2. Code Quality: Assess the clarity, organization, and readability of the React components.
+3. UI/UX: Evaluate the design and user interface for responsiveness and adherence to the
+   provided screenshots.
+4. Sentiment Analysis: Verify that sentences are correctly highlighted based on sentiment, and
+   tooltips display the correct topics.
+5. Optional Feature (if implemented): Assess the use of the optional `highlight_indices`
+   property.
+   This assignment is designed to assess the candidate's ability to integrate data from a file,
+   implement dynamic UI features, and handle state management in a React application.
 
-# you can remove it if you want (now deployment of backend is next step)
+### Resources
 
-```sh
-sudo npm i pm2 --global
-```
+Color code for each sentiment:
+● Positive: #D9F2DD
+● Negative: #F2DBD9
+● Mixed: #e8bd6d3d
+● Neutral: #eaf09b6b
+Single review design and styling:
+Tooltip design on hovering over a sentence
+Using the given reviews data as a json object, create a single page react app that
+lists the reviews (design can be referenced from the images attached), and
+highlight the sentences in the reviews text with appropriate colours relating to it's
+sentiment using the analytics data present in each review object. On hovering
+over the highlighted sentence, a tooltip should appear displaying the topic of that
+sentiment/sentence (refer to the screenshots attached).
 
-```sh
-sudo pm2 start npm  --name "backend-api-main" -- start
-```
-
-# other command of pm2 if you need
-
-```
-sudo npm i pm2 -g
-sudo pm2 start index
-
-# Other pm2 commands
-sudo pm2 show app
-sudo pm2 status
-sudo pm2 restart app
-sudo pm2 stop app
-sudo pm2 logs (Show log stream)
-sudo pm2 flush (Clear logs)
-
-# To make sure app starts when reboot
-sudo pm2 startup ubuntu
-```
-
-# Setup firewall
-
-```sh
-sudo ufw enable
-sudo ufw status
-sudo ufw allow ssh
-sudo ufw allow http
-sudo ufw allow https
-```
-
-## Add Path for nginx
-
-# then add you own path also
-
-```sh
-sudo chmod +x /home/
-sudo chmod +x /home/ubuntu
-```
-
-# Give permissions
-
-```sh
-sudo chmod -R 777 /home/ubuntu/prod-runner-backend/_work/AEGIS-backend/AEGIS-backend
-```
-
-# Restart the nginx server after save
-
-```sh
-sudo service nginx restart
-```
-
-# Check the status of server after save
-
-```sh
-sudo service nginx status
-```
-
-# SSL certification with certbot python3
-
-```sh
-sudo add-apt-repository ppa:certbot/certbot
-```
-
-```sh
-sudo apt-get install python3-certbot-nginx
-```
-
-```sh
-sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
-```
-
-# Only valid for 90 days, test the renewal process with
-
-```sh
-sudo certbot renew --dry-run
-```
-
-# To check ssl certificate of cerbot
-
-```sh
-sudo certbot certificates
-```
-
-# To delete existing certificate using cerbot
-
-```sh
-sudo certbot delete --cert-name your_domain
-```
+1. The review text is represented by the "content" property in each review object.
+2. The analytics property in each review is an array of objects, each object
+   contains four properties that you should use namely Topic, Sentiment,
+   Sentences and Highlight Indices.
+3. The "Topic" property should be displayed in the tooltip.
+4. The "Sentiment" property (can be positive, negative, mixed or neutral) is
+   depicted by the highlight color (we have provided the colors to use for
+   each sentiment).
+5. The "Sentences" property is an array of sentences present in the review text.
+   All sentences talk about that "Topic". Each sentence should be highlighted in the
+   paragraph with the color assigned to that "Sentiment".
+6. Optionally, use the "Highlight Indices" (an array of object) property to highlight
+   the sentences present in each range. Each object in the array contains three
+   values, start index, end index and sentiment (it's the same in each object and
+   is equal to the global "Sentiment" property) respectively. The start and end
+   indices are the starting and ending position of a sentence in the review text
